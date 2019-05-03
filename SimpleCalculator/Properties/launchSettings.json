@@ -28,7 +28,10 @@
     },
     "Azure Dev Spaces": {
       "commandName": "AzureDevSpaces",
-      "launchBrowser": true
+      "launchBrowser": true,
+      "resourceGroup": "AksDemo",
+      "aksName": "AksDemoCluster",
+      "subscriptionId": "d5a78503-b800-41a5-a60b-39a580520bc4"
     },
     "Docker": {
       "commandName": "Docker",
