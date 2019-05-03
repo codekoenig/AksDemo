@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace SimpleCalculator.Controllers
 {
@@ -14,7 +10,9 @@ namespace SimpleCalculator.Controllers
         [Route("add")]
         public ActionResult<double> Add(double x, double y)
         {
-            return x + y;
+            var result = x + y;
+            System.IO.File.AppendAllText(@"calculator.log",$"{result.ToString()}\n");
+            return result;
         }
 
         [HttpGet]
